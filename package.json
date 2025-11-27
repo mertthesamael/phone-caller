@@ -1,0 +1,17 @@
+{
+  "name": "phone-call",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cron": "^1.4.1",
+    "elysia": "latest",
+    "twilio": "^5.10.6"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
