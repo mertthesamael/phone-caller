@@ -95,6 +95,24 @@ const app = new Elysia()
       },
     }),
   )
+ /* .use(cron({
+    name: "test-call",
+    timezone:"Europe/Istanbul",
+    pattern: Patterns.everyDayAt("23:42"),
+    run: async () => {
+        console.log("Test call");
+        await twilioClient.calls.create({
+          to: process.env.CALL_NUMBER || "",
+          from: callerId || "",
+          url: process.env.TWIML_URL || "https://demo.twilio.com/welcome/voice/",
+          // Optional: You can also use TwiML directly
+          // twiml: `<Response><Say>${message || "Hello, this is a test call."}</Say></Response>`,
+        });
+        
+      },
+    }),
+  )*/
   .listen(3000);
 
 console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
+
